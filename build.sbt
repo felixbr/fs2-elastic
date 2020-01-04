@@ -3,7 +3,7 @@ import sbt.Keys.licenses
 lazy val globalSettings = Seq(
   organization := "com.alessandromarrella",
   name := "fs2-elastic",
-  scalaVersion := "2.12.8",
+  scalaVersion := "2.12.10",
   publishTo := {
     val nexus = "https://oss.sonatype.org/"
     if (isSnapshot.value)
@@ -40,7 +40,7 @@ lazy val root = (project in file("."))
 
 import ReleaseTransformations._
 
-releaseCrossBuild := true 
+releaseCrossBuild := true
 releaseProcess := Seq[ReleaseStep](
   checkSnapshotDependencies,
   inquireVersions,
