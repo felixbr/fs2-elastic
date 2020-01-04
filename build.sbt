@@ -1,5 +1,8 @@
 import sbt.Keys.licenses
 
+Global / onChangedBuildSource := ReloadOnSourceChanges
+ThisBuild / turbo := true
+
 lazy val globalSettings = Seq(
   organization := "com.alessandromarrella",
   name := "fs2-elastic",
